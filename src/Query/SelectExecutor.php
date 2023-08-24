@@ -53,7 +53,7 @@ final readonly class SelectExecutor implements QueryExecutorInterface
             return [];
         }
 
-        return array_map(fn (array $row) => $this->mapper->__invoke($row, $this->entity), $result);
+        return array_map(fn (array $row) => ($this->mapper)($row, $this->entity), $result);
     }
 
 }
