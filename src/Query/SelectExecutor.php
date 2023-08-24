@@ -12,19 +12,19 @@ use PDO;
 /**
  * @template T
  */
-final class SelectExecutor implements QueryExecutorInterface
+final readonly class SelectExecutor implements QueryExecutorInterface
 {
     /**
      * @param clsss-string<T> $entity
      * @param mixed[] $schema
      */
     public function __construct(
-        private readonly PDO $pdo,
-        private readonly MapperInterface $mapper,
-        private readonly GenericBuilder $builder,
-        private readonly string $entity,
-        private readonly string $tableName,
-        private readonly array $schema
+        private PDO             $pdo,
+        private MapperInterface $mapper,
+        private GenericBuilder  $builder,
+        private string          $entity,
+        private string          $tableName,
+        private array           $schema
     ) {
     }
 

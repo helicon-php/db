@@ -7,7 +7,8 @@
             "Helicon\\Db\\": "src/"
         },
         "files": [
-            "src-functions/classname.php"
+            "src-functions/classname.php",
+            "src-functions/schema.php"
         ]
     },
     "autoload-dev": {
@@ -23,6 +24,7 @@
     ],
     "require": {
         "php": ">=8.2",
+        "ext-pdo": "*",
         "nilportugues/sql-query-builder": "^1.8",
         "helicon/object-mapper": "^1.1"
     },

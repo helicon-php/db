@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Helicon\Db;
 
 use Helicon\Db\Query\QueryExecutorInterface;
-use NilPortugues\Sql\QueryBuilder\Builder\GenericBuilder;
 
 interface DbInterface
 {

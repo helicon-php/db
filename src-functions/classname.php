@@ -6,6 +6,6 @@ namespace Helicon\Db\Functions;
 
 function classToTableName(string $class): string
 {
-    $class_parts = explode('\\', get_class());
-    echo end($class_parts);
+    $names = explode('\\', $class);
+    return strtolower(array_pop($names));
 }
