@@ -28,10 +28,12 @@ final class SelectExecutor implements QueryExecutorInterface
     ) {
     }
 
-    public function createQueryBuilder(): GenericBuilder
+    public function createQuery(): QueryInterface
     {
-        $this->builder->select()->setTable($this->tableName)->setColumns($this->schema);
-        return $this->builder;
+        $select = $this->builder->select();
+        $select->setTable($this->tableName)->setColumns($this->schema);
+
+        return $select;
     }
 
     /**
